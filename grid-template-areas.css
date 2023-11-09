@@ -1,0 +1,82 @@
+body[data-grid-method='areas'] .testimonial-grid
+{
+	display: grid;
+	gap: 1.5rem;
+	grid-auto-columns: 1fr;
+	grid-template-areas:
+		'one'
+		'two'
+		'three'
+		'four'
+		'five';
+
+	padding-block: 2rem;
+	width: min(95%, 70rem);
+	margin-inline: auto;
+}
+
+body[data-grid-method='areas'] .testimonial:nth-child(1)
+{
+	grid-area: one;
+}
+body[data-grid-method='areas'] .testimonial:nth-child(2)
+{
+	grid-area: two;
+}
+body[data-grid-method='areas'] .testimonial:nth-child(3)
+{
+	grid-area: three;
+}
+body[data-grid-method='areas'] .testimonial:nth-child(4)
+{
+	grid-area: four;
+}
+body[data-grid-method='areas'] .testimonial:nth-child(5)
+{
+	grid-area: five;
+}
+
+@media screen and (min-width: 33em)
+{
+	body[data-grid-method='areas'] .testimonial-grid
+	{
+		grid-template-areas:
+			"one one"
+			"two three"
+			"five five"
+			"four four";
+	}
+}
+
+@media screen and (min-width: 38em)
+{
+	body[data-grid-method='areas'] .testimonial-grid
+	{
+		grid-template-areas:
+			'one one'
+			'two five'
+			'three five'
+			'four four';
+	}
+}
+
+@media screen and (min-width: 54em)
+{
+	body[data-grid-method='areas'] .testimonial-grid
+	{
+		grid-template-areas:
+			"one one two"
+			"five five five"
+			"three four four";
+	}
+}
+
+@media screen and (min-width: 75em)
+{
+	body[data-grid-method='areas'] .testimonial-grid
+	{
+		grid-template-areas:
+			"one one two five"
+			"three four four five";
+	}
+}

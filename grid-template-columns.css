@@ -1,0 +1,80 @@
+body[data-grid-method='columns'] .testimonial-grid
+{
+	display: grid;
+	gap: 1.5rem;
+
+	padding-block: 2rem;
+	width: min(95%, 70rem);
+	margin-inline: auto;
+}
+
+@media screen and (min-width: 33em)
+{
+	body[data-grid-method='columns'] .testimonial-grid
+	{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	body[data-grid-method='columns'] .testimonial:nth-child(1),
+	body[data-grid-method='columns'] .testimonial:nth-child(4)
+	{
+		grid-column: span 2;
+	}
+	
+	body[data-grid-method='columns'] .testimonial:nth-child(5)
+	{
+		grid-column-start: 1;
+		grid-column-end: span 2;
+		grid-row-start: 3;
+		grid-row-end: span 1;
+	}
+}
+
+@media screen and (min-width: 38em)
+{
+	body[data-grid-method='columns'] .testimonial-grid
+	{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	body[data-grid-method='columns'] .testimonial:nth-child(5)
+	{
+		grid-column-start: 2;
+		grid-column-end: span 1;
+		grid-row-start: 2;
+		grid-row-end: span 2;
+	}
+}
+
+@media screen and (min-width: 54em)
+{
+	body[data-grid-method='columns'] .testimonial-grid
+	{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	body[data-grid-method='columns'] .testimonial:nth-child(5)
+	{
+		grid-column-start: 1;
+		grid-column-end: span 3;
+		grid-row-start: 2;
+		grid-row-end: span 1;
+	}
+}
+
+@media screen and (min-width: 75em)
+{
+	body[data-grid-method='columns'] .testimonial-grid
+	{
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	body[data-grid-method='columns'] .testimonial:last-child
+	{
+		grid-column-start: 4;
+		grid-column-end: span 1;
+		grid-row-start: 1;
+		grid-row-end: span 2;
+		/* grid-row: 1 / span 2; */
+	}
+}
